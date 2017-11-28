@@ -1,0 +1,12 @@
+{
+    "name": "Bozon",
+    "version": "0.1.0",
+    "description": "Bozon application built with Electron",
+    "author": {
+        "name": "imeepos",
+        "email": ""
+    },
+    "license": "MIT",
+    "main": "javascripts/main/index.js",
+    "dependencies": {}
+}
