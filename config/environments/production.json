@@ -1,4 +1,4 @@
 {
-  "reload": false,
-  "devTools": false
+    "reload": true,
+    "devTools": false
 }
