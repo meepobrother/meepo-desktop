@@ -1,16 +1,21 @@
 {
+<<<<<<< HEAD
     "name": "meepo",
     "version": "0.1.2",
     "description": "软件bug反馈，1037483576@qq.com，电话：13140415408，姓名：杨明明，反馈bug有奖励哦！本软件由杭州米波网络科技有限公司提供技术支持！",
     "repository": "https://github.com/meepobrother/meepo-desktop.git",
     "scripts": {
         "postinstall": "install-app-deps",
+<<<<<<< HEAD
         "mac": "bozon package mac",
         "build.win": "bozon package windows",
         "window": "electron-windows-inno-installer example.iss --icon ./resources/iconn.ico --platform win32-x64",
         "ia32": "wget https://npm.taobao.org/mirrors/electron/1.6.0/electron-v1.6.0-win32-ia32.zip -P .cache/v1.6.0/",
         "x64": "wget https://npm.taobao.org/mirrors/electron/1.6.0/electron-v1.6.0-win32-x64.zip -P .cache/v1.6.0/",
         "build": "electron-builder ."
+=======
+        "build": "electron-builder --win --ia32"
+>>>>>>> 7166a3c11b7745eb512684253bba06b9ba1ee7e1
     },
     "devDependencies": {
         "electron": "1.7.9",
@@ -27,6 +32,7 @@
         "mac": {
             "category": "meepo.app.category.type"
         }
+<<<<<<< HEAD
     },
     "sourceFiles": [
         "./app/javascripts/main/index.js",
@@ -35,3 +41,33 @@
     ]
 }
 
+=======
+=======
+  "name": "meepo",
+  "version": "0.1.2",
+  "description": "软件bug反馈，1037483576@qq.com，电话：13140415408，姓名：杨明明，反馈bug有奖励哦！本软件由杭州米波网络科技有限公司提供技术支持！",
+  "repository": "https://github.com/meepobrother/meepo-desktop.git",
+  "scripts": {
+    "postinstall": "install-app-deps",
+    "mac": "bozon package mac",
+    "win": "electron-builder ."
+  },
+  "devDependencies": {
+    "bozon": "^0.7.8",
+    "electron": "1.7.9",
+    "electron-builder": "19.45.4",
+    "gulp": "^3.9.1",
+    "mocha": "^4.0.1",
+    "spectron": "^3.7.2",
+    "webpack-stream": "^3.2.0"
+  },
+  "build": {
+    "appId": "com.electron.meepo",
+    "win": {},
+    "mac": {
+      "category": "meepo.app.category.type"
+>>>>>>> fac41443b10b8b62e2f84219a1cc52912335bfe2
+    }
+  }
+}
+>>>>>>> 7166a3c11b7745eb512684253bba06b9ba1ee7e1
