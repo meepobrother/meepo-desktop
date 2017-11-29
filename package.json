@@ -1,30 +1,4 @@
 {
-<<<<<<< HEAD
-    "name": "meepo",
-    "version": "0.1.2",
-    "description": "软件bug反馈，1037483576@qq.com，电话：13140415408，姓名：杨明明，反馈bug有奖励哦！本软件由杭州米波网络科技有限公司提供技术支持！",
-    "repository": "https://github.com/meepobrother/meepo-desktop.git",
-    "scripts": {
-        "postinstall": "install-app-deps",
-        "build": "electron-builder --win --ia32"
-    },
-    "devDependencies": {
-        "electron-builder": "19.45.4",
-        "electron": "1.7.9",
-        "gulp": "^3.9.1",
-        "mocha": "^4.0.1",
-        "spectron": "^3.7.2",
-        "webpack-stream": "^3.2.0"
-    },
-    "build": {
-        "appId": "com.electron.meepo",
-        "win": {
-
-        },
-        "mac": {
-            "category": "meepo.app.category.type"
-        }
-=======
   "name": "meepo",
   "version": "0.1.2",
   "description": "软件bug反馈，1037483576@qq.com，电话：13140415408，姓名：杨明明，反馈bug有奖励哦！本软件由杭州米波网络科技有限公司提供技术支持！",
@@ -32,7 +6,11 @@
   "scripts": {
     "postinstall": "install-app-deps",
     "mac": "bozon package mac",
-    "win": "electron-builder ."
+    "win": "electron-builder .",
+    "installer": "electron-windows-inno-installer example.iss --icon ./resources/iconn.ico --platform win32-x64",
+    "ia32": "",
+    "ia64": "",
+    "iss": "electron-windows-inno-installer --make-iss"
   },
   "devDependencies": {
     "bozon": "^0.7.8",
@@ -43,12 +21,23 @@
     "spectron": "^3.7.2",
     "webpack-stream": "^3.2.0"
   },
+  "sourceFiles": [
+    "./app/javascripts/main/index.js",
+    "./favicon.ico",
+    "./www/**/**"
+  ],
   "build": {
     "appId": "com.electron.meepo",
     "win": {},
     "mac": {
       "category": "meepo.app.category.type"
->>>>>>> fac41443b10b8b62e2f84219a1cc52912335bfe2
     }
+  },
+  "dependencies": {
+    "electron-packager": "^10.1.0",
+    "electron-winstaller": "^2.6.3",
+    "gulp-atom-electron": "^1.15.0",
+    "gulp-symdest": "^1.1.0",
+    "ts-node": "^3.3.0"
   }
 }
