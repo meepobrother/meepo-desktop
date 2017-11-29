@@ -5,11 +5,16 @@
     "repository": "https://github.com/meepobrother/meepo-desktop.git",
     "scripts": {
         "postinstall": "install-app-deps",
-        "mac": "bozon package mac"
+        "mac": "bozon package mac",
+        "build.win": "bozon package windows",
+        "window": "electron-windows-inno-installer example.iss --icon ./resources/iconn.ico --platform win32-x64",
+        "ia32": "wget https://npm.taobao.org/mirrors/electron/1.6.0/electron-v1.6.0-win32-ia32.zip -P .cache/v1.6.0/",
+        "x64": "wget https://npm.taobao.org/mirrors/electron/1.6.0/electron-v1.6.0-win32-x64.zip -P .cache/v1.6.0/"
     },
     "devDependencies": {
-        "electron-builder": "19.45.4",
         "electron": "1.7.9",
+        "electron-builder": "19.45.4",
+        "electron-windows-inno-installer": "^0.4.0",
         "gulp": "^3.9.1",
         "mocha": "^4.0.1",
         "spectron": "^3.7.2",
@@ -17,11 +22,14 @@
     },
     "build": {
         "appId": "com.electron.meepo",
-        "win": {
-
-        },
+        "win": {},
         "mac": {
             "category": "meepo.app.category.type"
         }
-    }
+    },
+    "sourceFiles": [
+        "./app/javascripts/main/index.js",
+        "./resources/icon.ico",
+        "./app/**/**"
+    ]
 }

@@ -1,0 +1,59 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add electron-windows-inno-installer
+
+PATH: 
+  /Users/meepo/.rvm/gems/ruby-2.4.0/bin:/Users/meepo/.rvm/gems/ruby-2.4.0@global/bin:/Users/meepo/.rvm/rubies/ruby-2.4.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/meepo/.rvm/bin
+
+Yarn version: 
+  1.2.1
+
+Node version: 
+  8.9.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+      "name": "meepo",
+      "version": "0.1.2",
+      "description": "软件bug反馈，1037483576@qq.com，电话：13140415408，姓名：杨明明，反馈bug有奖励哦！本软件由杭州米波网络科技有限公司提供技术支持！",
+      "repository": "https://github.com/meepobrother/meepo-desktop.git",
+      "scripts": {
+          "postinstall": "install-app-deps",
+          "mac": "bozon package mac"
+      },
+      "devDependencies": {
+          "electron-builder": "19.45.4",
+          "electron": "1.7.9",
+          "gulp": "^3.9.1",
+          "mocha": "^4.0.1",
+          "spectron": "^3.7.2",
+          "webpack-stream": "^3.2.0"
+      },
+      "build": {
+          "appId": "com.electron.meepo",
+          "win": {
+  
+          },
+          "mac": {
+              "category": "meepo.app.category.type"
+          }
+      },
+      "sourceFiles":[ "./app/javascripts/main/index.js","./resources/icon.ico","./app/**/**"],
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  SyntaxError: /Users/meepo/Desktop/electron-boilerplate/bozon/package.json: Unexpected token } in JSON at position 802
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:770:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:92:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:103:13
+      at <anonymous>
